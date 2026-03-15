@@ -3,15 +3,15 @@
   "displayName": "Global Markdown Sidebar",
   "description": "Pin your document folders in a persistent sidebar and open/reveal files from any workspace.",
   "version": "0.1.0",
-  "publisher": "local",
+  "publisher": "myg510",
   "license": "MIT",
-  "homepage": "https://github.com/<owner>/<repo>",
+  "homepage": "https://github.com/myg510/global-markdown-sidebar",
   "bugs": {
-    "url": "https://github.com/<owner>/<repo>/issues"
+    "url": "https://github.com/myg510/global-markdown-sidebar/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/<owner>/<repo>.git"
+    "url": "https://github.com/myg510/global-markdown-sidebar.git"
   },
   "keywords": [
     "markdown",
