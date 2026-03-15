@@ -1,0 +1,134 @@
+{
+  "name": "global-markdown-sidebar",
+  "displayName": "Global Markdown Sidebar",
+  "description": "Pin your document folders in a persistent sidebar and open/reveal files from any workspace.",
+  "version": "0.0.6",
+  "publisher": "local",
+  "license": "MIT",
+  "homepage": "https://github.com/<owner>/<repo>",
+  "bugs": {
+    "url": "https://github.com/<owner>/<repo>/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/<owner>/<repo>.git"
+  },
+  "keywords": [
+    "markdown",
+    "sidebar",
+    "explorer",
+    "knowledge-base",
+    "notes",
+    "documentation",
+    "navigation"
+  ],
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other",
+    "Visualization",
+    "Education"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "globalMarkdownSidebar",
+          "title": "知识库",
+          "icon": "media/book.svg"
+        }
+      ]
+    },
+    "views": {
+      "globalMarkdownSidebar": [
+        {
+          "id": "globalMarkdownSidebarView",
+          "name": "文档资源",
+          "icon": "media/book.svg"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "globalMarkdownSidebar.refresh",
+        "title": "刷新目录"
+      },
+      {
+        "command": "globalMarkdownSidebar.addFolders",
+        "title": "添加目录"
+      },
+      {
+        "command": "globalMarkdownSidebar.manageFolders",
+        "title": "管理目录"
+      },
+      {
+        "command": "globalMarkdownSidebar.removeFolder",
+        "title": "移除目录"
+      },
+      {
+        "command": "globalMarkdownSidebar.openAndReveal",
+        "title": "打开并定位文件"
+      },
+      {
+        "command": "globalMarkdownSidebar.revealInExplorer",
+        "title": "在资源管理器中打开"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "globalMarkdownSidebar.refresh",
+          "when": "view == globalMarkdownSidebarView",
+          "group": "navigation@1"
+        },
+        {
+          "command": "globalMarkdownSidebar.addFolders",
+          "when": "view == globalMarkdownSidebarView",
+          "group": "navigation@2"
+        },
+        {
+          "command": "globalMarkdownSidebar.manageFolders",
+          "when": "view == globalMarkdownSidebarView",
+          "group": "navigation@3"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "globalMarkdownSidebar.removeFolder",
+          "when": "view == globalMarkdownSidebarView && viewItem == rootFolder",
+          "group": "inline@1"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Global Markdown Sidebar",
+      "properties": {
+        "globalMarkdownSidebar.folders": {
+          "type": "array",
+          "default": [],
+          "scope": "application",
+          "items": {
+            "type": "string"
+          },
+          "description": "Absolute folder paths scanned by the Global Markdown Sidebar.",
+          "markdownDescription": "全局 Markdown 根目录列表。可在设置中搜索 **Global Markdown Sidebar: Folders** 直接修改，支持添加多个绝对路径。"
+        },
+        "globalMarkdownSidebar.extensions": {
+          "type": "array",
+          "default": [
+            ".md",
+            ".markdown"
+          ],
+          "scope": "application",
+          "items": {
+            "type": "string"
+          },
+          "description": "File extensions to display in the sidebar.",
+          "markdownDescription": "要显示的文件扩展名列表，可自定义，如 `.md`、`.txt`、`.rst`。"
+        }
+      }
+    }
+  }
+}
