@@ -19,11 +19,6 @@
 - 跨工作区与空窗口场景点击跳转稳定可用
 - 仓库仅保留扩展本体所需文件
 
-## 0.0.5 修复
-
-- 修复部分场景点击文件无响应的问题
-- 修复在空窗口和非同路径工作区下的定位稳定性
-
 ## 配置项
 
 在 VS Code 设置中搜索 `Global Markdown Sidebar: Folders` 或 `globalMarkdownSidebar.folders`，填入绝对路径数组。
