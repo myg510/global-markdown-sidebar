@@ -2,7 +2,7 @@
   "name": "global-markdown-sidebar",
   "displayName": "Global Markdown Sidebar",
   "description": "Pin your document folders in a persistent sidebar and open/reveal files from any workspace.",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "publisher": "local",
   "license": "MIT",
   "homepage": "https://github.com/<owner>/<repo>",

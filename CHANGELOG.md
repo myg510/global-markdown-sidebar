@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.0
+
+- First stable release.
+- Finalize cross-workspace file open and Explorer reveal behavior.
+- Keep only extension runtime files in repository.
+
 ## 0.0.6
 
 - Improve cross-workspace and empty-window open/reveal stability.
